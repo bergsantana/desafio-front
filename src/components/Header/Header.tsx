@@ -2,17 +2,24 @@ import { Menu, Search, ShoppingCart } from "@mui/icons-material";
 import PriceFilter from "../PriceFilter";
 import SearchFilter from "../SearchFilter";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { PriceFilterContext } from "../../context/PriceFilterContext";
 
 interface HeaderProps {
     searchStr: string
     hitSearch: Function
     maxPrice: number
     minPrice: number
+     
 }
 
 export default function Header(props: HeaderProps) {
 
+    //const { setMinMax } = useContext(PriceFilterContext)
+
     const navigate = useNavigate()
+
+    //const setPriceContextFunc = (ns: number[]) => props.updatePriceContext(ns)
 
     return (
         <header className="flex flex-col max-w-full bg-white p-1" >
@@ -23,12 +30,12 @@ export default function Header(props: HeaderProps) {
                 <Menu />
                 <div className="">Max Price</div>
                 <div className="mx-2 w-5/12 items-center lg:w-28 ">
-                    <PriceFilter min={props.minPrice} max={props.maxPrice}   />
+                    <PriceFilter min={props.minPrice} max={props.maxPrice}     />
             
                 </div>
  
             </div>
-            <div className="flex w-full pl-2 " >
+            <div className="flex w-full pl-2 lg:justify-end" >
                     <SearchFilter  hitSearch={props.hitSearch} text=""/>
                     <Search />
                      

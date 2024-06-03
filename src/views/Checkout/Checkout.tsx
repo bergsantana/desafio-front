@@ -7,7 +7,7 @@ export default function Checkout() {
     const { cart, setProducts } = useContext(CartContext)
 
     const [ cartTotal, setCartTotal ] = useState(0)
-    //const { cartPreview, setCartPreview } = useState<()
+ 
 
     const calcCartTotal = () => {
         const i = 0

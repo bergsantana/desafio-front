@@ -8,6 +8,8 @@ import Header from './components/Header/Header'
 import { Product } from './interfaces/Product'
 import { CartContext } from './context/CartContext'
 import { AnimatePresence, motion } from 'framer-motion'
+import { PriceFilterContext } from './context/PriceFilterContext'
+import { SearchFilterContext } from './context/SearchFilterContext'
 
 
 
@@ -24,21 +26,23 @@ export const defaultCartState =  {
 
 function App() {
   const [ cart, setProducts ] = useState<{ product: Product, qty: number}[]>([defaultCartState])
-
-
+  const [ minMax, setMinMax ] = useState<{ minMax: number[]}>( { minMax: [1, 1000] } )
+  const [ searchStr, setSearchStr] = useState< {searchStr: string}>( {searchStr: ''})
+ 
   return (
     <CartContext.Provider value={{ cart, setProducts}}>
-      
-        <div className='bg-gray-300  min-h-fit h-screen grid grid-cols-1 self-end'>
-          <Header hitSearch={() => {}} maxPrice={500} minPrice={0} searchStr={''}  />
-          <AnimatePresence mode='wait'> 
-            <Outlet />
+      <PriceFilterContext.Provider value={{minMax, setMinMax }}>
+        <SearchFilterContext.Provider value={{ searchStr, setSearchStr}}>
+          <div className='bg-gray-300  min-h-fit h-screen grid grid-cols-1 self-end'>
+            <Header hitSearch={() => {}} maxPrice={500} minPrice={0} searchStr={''}    />
+            <AnimatePresence mode='wait'> 
+              <Outlet />
+            </AnimatePresence>
+            <Footer />
+          </div>
 
-          </AnimatePresence>
-          <Footer />
-        </div>
-
-      
+        </SearchFilterContext.Provider>
+      </PriceFilterContext.Provider>
     </CartContext.Provider>
   )
 }
