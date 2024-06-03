@@ -3,7 +3,7 @@ import api from "../api/api"
 import { Product } from "../interfaces/Product"
 import ItemCard from "../components/ItemCard"
 import { useNavigate } from "react-router-dom"
-
+ 
 export default function Home() {
     const [data, setData] = useState<Product[]>()
 
@@ -30,18 +30,20 @@ export default function Home() {
     }, [])
 
     return (
-        <div className="p-2">
-            <p>Home</p>
-            <div className="flex gap-2 flex-wrap lg:px-10">
-                {data && data.map((item) => (
-                    <button onClick={() =>  goToItemDescription(item.id)}>
-                        <ItemCard {...item} key={item.id} />
-                    </button>
-                ))
- 
-            }
+        
+            <div className="p-2">
+                <p>Home</p>
+                <div className="flex gap-2 flex-wrap lg:px-10">
+                    {data && data.map((item) => (
+                        <button onClick={() =>  goToItemDescription(item.id)}>
+                            <ItemCard {...item} key={item.id} />
+                        </button>
+                    ))
+    
+                }
+                </div>
+                    
             </div>
-                 
-        </div>
+ 
     )
 }

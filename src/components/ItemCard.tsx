@@ -17,7 +17,7 @@ export default function ItemCard(props: Product) {
                 <div className="text-sm text-black font-thin"><RateReviewOutlined />{props.rating.count}
                      
                 </div>
-                <div className="text-sm text-black font-thin"><Rating defaultValue={props.rating.rate} disabled={true} /></div>
+                <div className="text-sm text-black font-thin"><Rating defaultValue={props.rating.rate} disabled={false}  readOnly={true} /></div>
             </div>
         </div>
     )
