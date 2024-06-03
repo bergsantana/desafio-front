@@ -41,7 +41,9 @@ export default function Header(props: HeaderProps) {
                 my-4
                 justify-center
                 items-center
-                text-blue-700   border-2 border-gray-200 w-12 rounded-3xl h-10  " >
+                text-blue-700   border-2 border-gray-200 w-12 rounded-3xl h-10
+                cursor-pointer
+                " >
                 <ShoppingCart />
             </div>
 
