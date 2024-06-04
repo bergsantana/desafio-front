@@ -2,14 +2,7 @@ import { Slider } from "@mui/material";
 import { useContext, useState } from "react";
 import { PriceFilterContext } from "../context/PriceFilterContext";
 
-
-interface PriceFilterProps {
-    max: number,
-    min: number,
-    //updateFilterContext: Function
-}
-
-export default function PriceFilter(props: PriceFilterProps) {
+export default function PriceFilter( ) {
     const [value, setValue] = useState<number[]>([1, 1000]);
 
     const { minMax,setMinMax } = useContext(PriceFilterContext)
@@ -19,6 +12,7 @@ export default function PriceFilter(props: PriceFilterProps) {
     }
 
     const handleChange = (event: Event, newValue: number | number[]) => {
+        event.preventDefault()
         console.log('min max local', newValue)
         const newVal = [value[0], value[1]]
         console.log(newVal)

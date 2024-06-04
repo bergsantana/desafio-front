@@ -2,23 +2,23 @@ import { Menu, Search, ShoppingCart } from "@mui/icons-material";
 import PriceFilter from "../PriceFilter";
 import SearchFilter from "../SearchFilter";
 import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
-import { PriceFilterContext } from "../../context/PriceFilterContext";
-import { CartContext } from "../../context/CartContext";
+//import { useContext } from "react";
+// import { PriceFilterContext } from "../../context/PriceFilterContext";
+//import { CartContext } from "../../context/CartContext";
 
-interface HeaderProps {
-    searchStr: string
-    hitSearch: Function
-    maxPrice: number
-    minPrice: number
+// interface HeaderProps {
+//     searchStr: string
+//     hitSearch: Function
+//     maxPrice: number
+//     minPrice: number
      
-}
+// }
 
-export default function Header(props: HeaderProps) {
+export default function Header( ) {
 
     //const { setMinMax } = useContext(PriceFilterContext)
 
-    const { cart } = useContext(CartContext)
+    //const { cart } = useContext(CartContext)
 
     const navigate = useNavigate()
 
@@ -56,10 +56,10 @@ export default function Header(props: HeaderProps) {
 
                 <div className="flex w-full lg:justify-end " >
                         <div className="flex w-56 ">
-                            <PriceFilter min={props.minPrice} max={props.maxPrice}     />
+                            <PriceFilter    />
                         </div>
                         <div className="flex">
-                            <SearchFilter  hitSearch={props.hitSearch} text=""/>
+                            <SearchFilter    />
                             <Search />
                         </div>
                 </div>

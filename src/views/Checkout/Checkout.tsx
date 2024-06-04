@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import { CartContext } from "../../context/CartContext"
 import AnimatedPage from "../../components/AnimatedPage/AnimatedPage"
 import { Backdrop, Box, Fade, Modal, Typography } from "@mui/material"
-import { Close, CloseFullscreenOutlined } from "@mui/icons-material";
+import { Close } from "@mui/icons-material";
 
 
 const style = {
@@ -21,7 +21,7 @@ const style = {
 
 export default function Checkout() {
 
-    const { cart, setProducts } = useContext(CartContext)
+    const { cart /*, setProducts */  } = useContext(CartContext)
 
     const [ cartTotal, setCartTotal ] = useState(0)
 

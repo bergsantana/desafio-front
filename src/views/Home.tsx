@@ -4,7 +4,7 @@ import { Product } from "../interfaces/Product"
 import ItemCard from "../components/ItemCard"
 import { useNavigate } from "react-router-dom"
 import AnimatedPage from "../components/AnimatedPage/AnimatedPage"
-import { CartContext } from "../context/CartContext"
+//import { CartContext } from "../context/CartContext"
 import { PriceFilterContext } from "../context/PriceFilterContext"
 import { SearchFilterContext } from "../context/SearchFilterContext"
  

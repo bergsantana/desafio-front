@@ -1,13 +1,11 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { Outlet } from 'react-router-dom'
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import { Product } from './interfaces/Product'
 import { CartContext } from './context/CartContext'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 import { PriceFilterContext } from './context/PriceFilterContext'
 import { SearchFilterContext } from './context/SearchFilterContext'
 
@@ -36,7 +34,7 @@ function App() {
           <div className='
             lg:h-screen
             bg-gray-300  overflow-scroll min-h-fit h-screen flex flex-col'>
-            <Header hitSearch={() => {}} maxPrice={500} minPrice={0} searchStr={''}    />
+            <Header     />
             <AnimatePresence mode='wait'> 
               <Outlet />
             </AnimatePresence>

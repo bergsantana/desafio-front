@@ -6,10 +6,10 @@ import { SearchFilterContext } from "../context/SearchFilterContext"
     hitSearch: Function
 }
 
-export default function SearchFilter(props: SearchFilter) {
+export default function SearchFilter( ) {
     const [searchStrLocal, updateSearchStr] = useState('')
 
-    const {searchStr ,setSearchStr } = useContext(SearchFilterContext)
+    const { /*searchStr ,*/ setSearchStr } = useContext(SearchFilterContext)
 
     function handleChange(str : string  ) {
         updateSearchStr(str)
