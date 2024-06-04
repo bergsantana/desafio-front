@@ -41,8 +41,8 @@ Contruído com Fake Store API para simular um e-commerce
       - [x] Em caso de falha, permitir que o usuário tente novamente.
 
 # Bônus (Opcional)
-    - [ ] Implemente a funcionalidade de troca de temas (claro/escuro).
-    - [x] Adicione animações para transições entre páginas e elementos usando uma biblioteca como Framer Motion.
+  - [ ] Implemente a funcionalidade de troca de temas (claro/escuro).
+  - [x] Adicione animações para transições entre páginas e elementos usando uma biblioteca como Framer Motion.
 
 # Entrega
-    - [x] Faça o deploy da aplicação em uma plataforma gratuita como Vercel ou Netlify.
+  - [x] Faça o deploy da aplicação em uma plataforma gratuita como Vercel ou Netlify.
