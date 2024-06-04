@@ -1,18 +1,21 @@
-import { Android, Apple } from "@mui/icons-material";
+import { Android, Apple, Facebook, Instagram, Twitter } from "@mui/icons-material";
  
 export default function Footer() {
     return (
-        <footer>
+        <footer 
+            className="
+            lg:h-full lg:p-16
+            flex pt-4 pb-5 px-4 gap-6
+            text-white font-mono  font-bold   
+            bg-blue-700 border-t-2 border-white p2"
+        >
             <div>
-                <h4>Departments</h4>
+                <h4>Follow us</h4>
                 <div>
-                    <p>Shirts</p>
-                    <p>Jackets</p>
-                    <p>Jewelry</p>
-                    <p>Eletronics</p>
-
+                    <Instagram />
+                    <Facebook />
+                    <Twitter/>
                 </div>
-                <h4>FAQ - Orientations</h4>
             </div>
             
             <div>
@@ -21,6 +24,9 @@ export default function Footer() {
                     <Android />
                     <Apple />
                 </div>
+            </div>
+            <div className="hidden lg:">
+
             </div>
         </footer>
     )

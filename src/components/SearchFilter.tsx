@@ -1,4 +1,4 @@
-import { KeyboardEventHandler, ReactEventHandler, useContext, useState } from "react"
+import { useContext, useState } from "react"
 import { SearchFilterContext } from "../context/SearchFilterContext"
 
  interface SearchFilter {
@@ -7,13 +7,13 @@ import { SearchFilterContext } from "../context/SearchFilterContext"
 }
 
 export default function SearchFilter(props: SearchFilter) {
-    const [searchStr, updateSearchStr] = useState('')
+    const [searchStrLocal, updateSearchStr] = useState('')
 
-    const { setSearchStr } = useContext(SearchFilterContext)
+    const {searchStr ,setSearchStr } = useContext(SearchFilterContext)
 
     function handleChange(str : string  ) {
         updateSearchStr(str)
-        setSearchStr({searchStr : searchStr})
+        setSearchStr({searchStr : searchStrLocal})
     }
 
     return (
@@ -21,10 +21,10 @@ export default function SearchFilter(props: SearchFilter) {
             <input
                  
                 className="bg-gray-200 rounded w-full pl-1 " 
-                type="text" value={searchStr}  
+                type="text" value={searchStrLocal}  
                 onChange={evt => {handleChange( evt.target.value ) } } 
                 placeholder="Search a item"
-            />   
+            />
         </div>
     )
 }

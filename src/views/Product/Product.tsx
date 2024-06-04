@@ -94,7 +94,9 @@ export default function ProductItem() {
                 <div className="flex  lg:mt-12">
                             <button 
                                 onClick={() => { item ? addToCart() : ''}}
-                                className="bg-blue-500 w-full mt-7 h-12 text-2xl font-bold font-mono text-white rounded hover:bg-blue-900 duration-200">
+                                className="
+                                        lg:w-6/12 lg:m-auto
+                                        bg-blue-500 w-full mt-7 h-12 text-2xl font-bold font-mono text-white rounded hover:bg-blue-900 duration-200">
                                 Add to cart
                             </button>
                 </div>

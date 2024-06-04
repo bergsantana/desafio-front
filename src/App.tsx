@@ -33,12 +33,17 @@ function App() {
     <CartContext.Provider value={{ cart, setProducts}}>
       <PriceFilterContext.Provider value={{minMax, setMinMax }}>
         <SearchFilterContext.Provider value={{ searchStr, setSearchStr}}>
-          <div className='bg-gray-300  min-h-fit h-screen grid grid-cols-1 self-end'>
+          <div className='
+            lg:h-screen
+            bg-gray-300  overflow-scroll min-h-fit h-screen flex flex-col'>
             <Header hitSearch={() => {}} maxPrice={500} minPrice={0} searchStr={''}    />
             <AnimatePresence mode='wait'> 
               <Outlet />
             </AnimatePresence>
-            <Footer />
+            <div className='lg:h-9'>
+
+              <Footer />
+            </div>
           </div>
 
         </SearchFilterContext.Provider>

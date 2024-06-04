@@ -1,5 +1,4 @@
 import { createContext } from "react";
-import { Product } from "../interfaces/Product";
 
 interface PriceFilterContextProps {
     minMax: {minMax:number[]}
