@@ -78,7 +78,7 @@ export default function Checkout() {
                         <div className="flex flex-col">
                             <input
                                 name="nameInput"
-                                className="pl-1 border-2 border-gray-400 rounded m-0 mt-2 w-96"  placeholder="Name on the card" type="text"/>
+                                className="pl-1 border-2 border-gray-400 rounded m-0 mt-2 w-full"  placeholder="Name on the card" type="text"/>
                             <div className="flex">
                                 <input 
                                     name="cardInput"    
@@ -87,7 +87,7 @@ export default function Checkout() {
                                     type="text"/>
                                 <input
                                     name="threeDigitInput" 
-                                    className="border-2  border-gray-400 rounded m-0 pl-2 mt-2 mr-1 w-24" 
+                                    className="border-2  border-gray-400 rounded m-0 pl-2 mt-2 mr-1 w-20" 
                                     placeholder="CVV" 
                                     type="text"/>
 
@@ -98,7 +98,7 @@ export default function Checkout() {
                                 <div className="text-gray-400 mr-4">Expiration date</div>
                                 <input 
                                     name="expDateInput"
-                                    className="border-2 border-gray-400 rounded m-0 mr-1" placeholder="Expiration date" type="date"/>
+                                    className="border-2 border-gray-400 rounded m-0 mr-1" placeholder="Expiration date" type="date" />
                             </div>
                             <input  
                                 name="idInput"

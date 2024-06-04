@@ -30,7 +30,7 @@ export default function Header( ) {
                 onClick={() => navigate('/')}
             > Fake Online Store</div>
             <div className=" lg:hidden flex w-full justify-between  lg:grid-cols-3">
-                {cart[0].product.title==='' ?  '': cart.length}<Menu />
+                 <Menu />
             </div>
             <div>
                 {/* <div className="hidden lg:flex border-2 border-gray-500 rounded px-2 w-56 overflow-scroll">
@@ -55,7 +55,7 @@ export default function Header( ) {
                 </div> */}
 
                 <div className="flex w-full lg:justify-end " >
-                        <div className="flex w-56 ">
+                        <div className="flex w-56 mr-1 ">
                             <PriceFilter    />
                         </div>
                         <div className="flex">
@@ -76,6 +76,7 @@ export default function Header( ) {
                 text-blue-700   border-2 border-gray-200 w-12 rounded-3xl h-10
                 cursor-pointer
                 " >
+                    {cart[0].product.title==='' ?  '': cart.length}
                 <ShoppingCart />
             </div>
              
