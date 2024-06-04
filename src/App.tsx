@@ -33,12 +33,12 @@ function App() {
         <SearchFilterContext.Provider value={{ searchStr, setSearchStr}}>
           <div className='
             lg:h-screen
-            bg-gray-300  overflow-scroll min-h-fit h-screen flex flex-col'>
+            bg-gray-100  overflow-scroll max-h-screen  h-screen  grid grid-cols-1 grid-rows-home  '>
             <Header     />
             <AnimatePresence mode='wait'> 
               <Outlet />
             </AnimatePresence>
-            <div className='lg:h-9'>
+            <div className='lg:h-full h-36 '>
 
               <Footer />
             </div>

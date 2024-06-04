@@ -81,7 +81,7 @@ export default function ProductItem() {
                         <div className="pt-3"
                         >
                             <div className="font-mono text-gray-600">Shipping</div>
-                            <input className="h-8 lg:bg-gray-200 bg-white rounded-lg text-gray-500 pl-3 mb-" value={'Not needed'} disabled/>
+                            <input className="h-8 w-10/12 lg:bg-gray-200 bg-white rounded-lg text-gray-500 pl-3  " value={'Not needed'} disabled/>
                         </div>
                         <div className="flex gap-4 text-sm font-mono items-end">
                             <div className="text-sm text-black font-thin"><RateReviewOutlined/>{item?.rating.count}

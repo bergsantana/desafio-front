@@ -22,8 +22,8 @@ export default function PriceFilter( ) {
         setValue(newValue as number[]);
       };
     return (
-        <div className="w-48 flex gap-4 text-sm items-center text-green-700">
-            <div>${minMax.minMax[0]}</div>
+        <div className="w-48 flex gap-4 text-sm items-center text-green-700 mx-1">
+            <div className="text-sm">${minMax.minMax[0]}</div>
            <Slider
                 className="w-1"
                 getAriaLabel={() => 'Temperature range'}
@@ -36,7 +36,7 @@ export default function PriceFilter( ) {
                 min={-50}
                 max={1050}
             />
-            <div>${minMax.minMax[1]}</div>
+            <div className="text-sm">${minMax.minMax[1]}</div>
         </div>
     )
 }

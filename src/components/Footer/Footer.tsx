@@ -5,6 +5,7 @@ export default function Footer() {
         <footer 
             className="
             lg:h-full lg:p-16
+            h-full
             flex pt-4 pb-5 px-4 gap-6
             text-white font-mono  font-bold   
             bg-blue-700 border-t-2 border-white p2"
