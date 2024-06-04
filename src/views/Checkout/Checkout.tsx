@@ -88,7 +88,7 @@ export default function Checkout() {
                                 <input
                                     name="threeDigitInput" 
                                     className="border-2  border-gray-400 rounded m-0 pl-2 mt-2 mr-1 w-24" 
-                                    placeholder="BACK NUM" 
+                                    placeholder="CVV" 
                                     type="text"/>
 
                             </div>

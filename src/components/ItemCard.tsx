@@ -4,7 +4,7 @@ import { RateReviewOutlined } from "@mui/icons-material";
 
 export default function ItemCard(props: Product) {
     return (
-        <div className="px-1 py-1 flex flex-col bg-white text-blue-500 font-bold rounded-lg h-72 w-48  justify-between">
+        <div className="px-1 py-1 flex flex-col bg-white text-blue-500 font-bold rounded-lg h-72 w-44  justify-between">
             <div className="ml-4 mb-2 text-sm font-bold ">{props.title.substring(0, 25)}</div>
             <div className="h-fit bg-white rounded-lg">
                 <img src={props.image} className="m-auto object-scale-down h-36 rounded-lg"/>

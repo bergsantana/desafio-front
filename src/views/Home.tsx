@@ -46,7 +46,7 @@ export default function Home() {
 
     return (
         <AnimatedPage>
-            <div className="p-1 px-2 min-h-fit">
+            <div className="p-1 px-1 min-h-fit">
                 
                 <div className="flex gap-2 flex-wrap lg:px-10 h-fit bg-gray-200 lg:p-2">
                     {data && data.map((item) => (

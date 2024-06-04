@@ -2,9 +2,9 @@ import { Menu, Search, ShoppingCart } from "@mui/icons-material";
 import PriceFilter from "../PriceFilter";
 import SearchFilter from "../SearchFilter";
 import { useNavigate } from "react-router-dom";
-//import { useContext } from "react";
+import { useContext } from "react";
 // import { PriceFilterContext } from "../../context/PriceFilterContext";
-//import { CartContext } from "../../context/CartContext";
+import { CartContext } from "../../context/CartContext";
 
 // interface HeaderProps {
 //     searchStr: string
@@ -18,7 +18,7 @@ export default function Header( ) {
 
     //const { setMinMax } = useContext(PriceFilterContext)
 
-    //const { cart } = useContext(CartContext)
+    const { cart } = useContext(CartContext)
 
     const navigate = useNavigate()
 
@@ -30,7 +30,7 @@ export default function Header( ) {
                 onClick={() => navigate('/')}
             > Fake Online Store</div>
             <div className=" lg:hidden flex w-full justify-between  lg:grid-cols-3">
-                <Menu />
+                {cart[0].product.title==='' ?  '': cart.length}<Menu />
             </div>
             <div>
                 {/* <div className="hidden lg:flex border-2 border-gray-500 rounded px-2 w-56 overflow-scroll">
